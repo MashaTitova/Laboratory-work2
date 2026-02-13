@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AlgebraicProgressionLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf63c02ae20494ae063a424ad6c25efd3222ae49")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25822200d3ee7cd7b2c11c64669e30ab72189b37")]
 [assembly: System.Reflection.AssemblyProductAttribute("AlgebraicProgressionLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AlgebraicProgressionLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

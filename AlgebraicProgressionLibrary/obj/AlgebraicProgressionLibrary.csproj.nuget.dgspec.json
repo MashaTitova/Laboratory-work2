@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Masha\\Алгоритмизация\\Семестр2\\Лабораторная работа2\\lab2\\AlgebraicProgressionLibrary\\AlgebraicProgressionLibrary.csproj": {}
+    "D:\\_git\\MashaTitova\\AlgebraicProgressionLibrary\\AlgebraicProgressionLibrary.csproj": {}
   },
   "projects": {
-    "D:\\Masha\\Алгоритмизация\\Семестр2\\Лабораторная работа2\\lab2\\AlgebraicProgressionLibrary\\AlgebraicProgressionLibrary.csproj": {
+    "D:\\_git\\MashaTitova\\AlgebraicProgressionLibrary\\AlgebraicProgressionLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Masha\\Алгоритмизация\\Семестр2\\Лабораторная работа2\\lab2\\AlgebraicProgressionLibrary\\AlgebraicProgressionLibrary.csproj",
+        "projectUniqueName": "D:\\_git\\MashaTitova\\AlgebraicProgressionLibrary\\AlgebraicProgressionLibrary.csproj",
         "projectName": "AlgebraicProgressionLibrary",
-        "projectPath": "D:\\Masha\\Алгоритмизация\\Семестр2\\Лабораторная работа2\\lab2\\AlgebraicProgressionLibrary\\AlgebraicProgressionLibrary.csproj",
+        "projectPath": "D:\\_git\\MashaTitova\\AlgebraicProgressionLibrary\\AlgebraicProgressionLibrary.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\Masha\\Алгоритмизация\\Семестр2\\Лабораторная работа2\\lab2\\AlgebraicProgressionLibrary\\obj\\",
+        "outputPath": "D:\\_git\\MashaTitova\\AlgebraicProgressionLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
