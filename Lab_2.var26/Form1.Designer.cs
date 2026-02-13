@@ -118,6 +118,7 @@
             ArithmeticSequence_textBox.ReadOnly = true;
             ArithmeticSequence_textBox.Size = new Size(561, 189);
             ArithmeticSequence_textBox.TabIndex = 8;
+            ArithmeticSequence_textBox.TextChanged += ArithmeticSequence_textBox_TextChanged;
             // 
             // Difference_textBox
             // 

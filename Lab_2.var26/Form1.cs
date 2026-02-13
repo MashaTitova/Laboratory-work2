@@ -291,6 +291,11 @@ namespace Lab_2.var26
                 }
             }
         }
+
+        private void ArithmeticSequence_textBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

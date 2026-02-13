@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Masha\\Алгоритмизация\\Семестр2\\Лабораторная работа2\\lab2\\Lab_2.var26\\Lab_2.var26.csproj",
+      "projectUniqueName": "D:\\_git\\MashaTitova\\Lab_2.var26\\Lab_2.var26.csproj",
       "projectName": "Lab_2.var26",
-      "projectPath": "D:\\Masha\\Алгоритмизация\\Семестр2\\Лабораторная работа2\\lab2\\Lab_2.var26\\Lab_2.var26.csproj",
+      "projectPath": "D:\\_git\\MashaTitova\\Lab_2.var26\\Lab_2.var26.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\Masha\\Алгоритмизация\\Семестр2\\Лабораторная работа2\\lab2\\Lab_2.var26\\obj\\",
+      "outputPath": "D:\\_git\\MashaTitova\\Lab_2.var26\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
