@@ -1,0 +1,12 @@
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\CheckTypeLibrary\bin\Debug\net10.0\CheckTypeLibrary.deps.json
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\CheckTypeLibrary\bin\Debug\net10.0\CheckTypeLibrary.dll
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\CheckTypeLibrary\bin\Debug\net10.0\CheckTypeLibrary.pdb
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\CheckTypeLibrary\obj\Debug\net10.0\CheckTypeLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\CheckTypeLibrary\obj\Debug\net10.0\CheckTypeLibrary.AssemblyInfoInputs.cache
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\CheckTypeLibrary\obj\Debug\net10.0\CheckTypeLibrary.AssemblyInfo.cs
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\CheckTypeLibrary\obj\Debug\net10.0\CheckTypeLibrary.csproj.CoreCompileInputs.cache
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\CheckTypeLibrary\obj\Debug\net10.0\CheckTypeLibrary.sourcelink.json
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\CheckTypeLibrary\obj\Debug\net10.0\CheckTypeLibrary.dll
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\CheckTypeLibrary\obj\Debug\net10.0\refint\CheckTypeLibrary.dll
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\CheckTypeLibrary\obj\Debug\net10.0\CheckTypeLibrary.pdb
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\CheckTypeLibrary\obj\Debug\net10.0\ref\CheckTypeLibrary.dll

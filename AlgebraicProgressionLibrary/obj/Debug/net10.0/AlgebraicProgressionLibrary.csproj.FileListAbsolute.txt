@@ -1,0 +1,12 @@
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\AlgebraicProgressionLibrary\bin\Debug\net10.0\AlgebraicProgressionLibrary.deps.json
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\AlgebraicProgressionLibrary\bin\Debug\net10.0\AlgebraicProgressionLibrary.dll
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\AlgebraicProgressionLibrary\bin\Debug\net10.0\AlgebraicProgressionLibrary.pdb
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\AlgebraicProgressionLibrary\obj\Debug\net10.0\AlgebraicProgressionLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\AlgebraicProgressionLibrary\obj\Debug\net10.0\AlgebraicProgressionLibrary.AssemblyInfoInputs.cache
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\AlgebraicProgressionLibrary\obj\Debug\net10.0\AlgebraicProgressionLibrary.AssemblyInfo.cs
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\AlgebraicProgressionLibrary\obj\Debug\net10.0\AlgebraicProgressionLibrary.csproj.CoreCompileInputs.cache
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\AlgebraicProgressionLibrary\obj\Debug\net10.0\AlgebraicProgressionLibrary.sourcelink.json
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\AlgebraicProgressionLibrary\obj\Debug\net10.0\AlgebraicProgressionLibrary.dll
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\AlgebraicProgressionLibrary\obj\Debug\net10.0\refint\AlgebraicProgressionLibrary.dll
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\AlgebraicProgressionLibrary\obj\Debug\net10.0\AlgebraicProgressionLibrary.pdb
+D:\Masha\Алгоритмизация\Семестр2\Лабораторная работа2\lab2\AlgebraicProgressionLibrary\obj\Debug\net10.0\ref\AlgebraicProgressionLibrary.dll
