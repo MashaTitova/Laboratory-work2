@@ -193,19 +193,19 @@ namespace Lab_2.var26
         /// Вывод арифметической прогрессии, смена поведения полей и кнопки
         /// </summary>
         private void ShowVisualizing_button_Click(object sender, EventArgs e)
-{
-    Random random = new Random();
-    Bitmap bitmap = new Bitmap(ProgressionVisualizing_pictureBox.Width,
-                              ProgressionVisualizing_pictureBox.Height);
-    Graphics g = Graphics.FromImage(bitmap);
+        {
+        Random random = new Random();
+        Bitmap bitmap = new Bitmap(ProgressionVisualizing_pictureBox.Width,
+                                ProgressionVisualizing_pictureBox.Height);
+        Graphics g = Graphics.FromImage(bitmap);
 
-    if (Check_calculate_ability() && ShowVisualizing_button.Text == "Показать")
-    {
-        // Генерация последовательности
-        AlgebraicProgressionLibrary.Class1.Sequence_generator(
-            Convert.ToDouble(FirstMember_textBox.Text),
-            Convert.ToDouble(Difference_textBox.Text),
-            Convert.ToInt32(MemberNumber_textBox.Text));
+        if (Check_calculate_ability() && ShowVisualizing_button.Text == "Показать")
+        {
+            // Генерация последовательности
+            AlgebraicProgressionLibrary.Class1.Sequence_generator(
+                Convert.ToDouble(FirstMember_textBox.Text),
+                Convert.ToDouble(Difference_textBox.Text),
+                Convert.ToInt32(MemberNumber_textBox.Text));
 
         double[] progression_mass = AlgebraicProgressionLibrary.Global.numbers;
         int x = 50;
@@ -217,7 +217,7 @@ namespace Lab_2.var26
         g.Clear(Color.White);
 
         // Расчет размера стрелки
-        int arrowLength = ProgressionVisualizing_pictureBox.Height / 2 / progression_mass.Length;
+            int arrowLength = ProgressionVisualizing_pictureBox.Height / 2 / progression_mass.Length;
 
         for (int i = 0; i < progression_mass.Length; i++)
         {
@@ -283,6 +283,7 @@ namespace Lab_2.var26
             }
             x += width + arrowLength;
         }
+        //Стрелка последнего столбца
         using (Pen pLast = new Pen(Brushes.Black, 4f))
         {
             pLast.EndCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
@@ -303,16 +304,16 @@ namespace Lab_2.var26
         }
         ProgressionVisualizing_pictureBox.Image = bitmap;
         ShowVisualizing_button.Text = "Очистить";
-    }
-    else
-    {
+        }
+        else
+        {
         if (ShowVisualizing_button.Text == "Очистить")
         {
             g.Clear(Color.White);
             ProgressionVisualizing_pictureBox.Image = bitmap;
             ShowVisualizing_button.Text = "Показать";
         }
-    }
+        }
 }
 
         /// <summary>

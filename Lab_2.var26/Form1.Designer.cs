@@ -50,6 +50,7 @@
             SumFormula_textBox = new TextBox();
             MemberSum_label = new Label();
             SumFormula_label = new Label();
+            label1 = new Label();
             ArithmeticSequence_tabControl.SuspendLayout();
             Difference_tabPage.SuspendLayout();
             ProgressionVisualizing_tabPage.SuspendLayout();
@@ -65,6 +66,7 @@
             ArithmeticSequence_tabControl.Location = new Point(0, 0);
             ArithmeticSequence_tabControl.Name = "ArithmeticSequence_tabControl";
             ArithmeticSequence_tabControl.SelectedIndex = 0;
+            ArithmeticSequence_tabControl.ShowToolTips = true;
             ArithmeticSequence_tabControl.Size = new Size(1109, 644);
             ArithmeticSequence_tabControl.TabIndex = 0;
             ArithmeticSequence_tabControl.KeyUp += KeyDown;
@@ -85,7 +87,7 @@
             Difference_tabPage.Padding = new Padding(3);
             Difference_tabPage.Size = new Size(1093, 590);
             Difference_tabPage.TabIndex = 0;
-            Difference_tabPage.Text = "SequenceGenerator";
+            Difference_tabPage.Text = "Генератор прогрессии";
             Difference_tabPage.UseVisualStyleBackColor = true;
             // 
             // MemberNumber_textBox
@@ -192,6 +194,7 @@
             // ProgressionVisualizing_tabPage
             // 
             ProgressionVisualizing_tabPage.BackColor = Color.WhiteSmoke;
+            ProgressionVisualizing_tabPage.Controls.Add(label1);
             ProgressionVisualizing_tabPage.Controls.Add(ShowVisualizing_button);
             ProgressionVisualizing_tabPage.Controls.Add(ProgressionVisualizing_pictureBox);
             ProgressionVisualizing_tabPage.Controls.Add(ProgressionVisualizing_label);
@@ -200,7 +203,7 @@
             ProgressionVisualizing_tabPage.Padding = new Padding(3);
             ProgressionVisualizing_tabPage.Size = new Size(1093, 590);
             ProgressionVisualizing_tabPage.TabIndex = 2;
-            ProgressionVisualizing_tabPage.Text = "ProgressionVisualizing";
+            ProgressionVisualizing_tabPage.Text = "Визуализатор прогрессии";
             // 
             // ShowVisualizing_button
             // 
@@ -245,7 +248,7 @@
             ProgressionSum_tabPage.Padding = new Padding(3);
             ProgressionSum_tabPage.Size = new Size(1093, 590);
             ProgressionSum_tabPage.TabIndex = 1;
-            ProgressionSum_tabPage.Text = "ProgressionSum";
+            ProgressionSum_tabPage.Text = "Сумма элементов прогресии";
             ProgressionSum_tabPage.UseVisualStyleBackColor = true;
             // 
             // CulculateSum_button
@@ -301,6 +304,18 @@
             SumFormula_label.TabIndex = 9;
             SumFormula_label.Text = "Формула суммы элементов арифметической прогрессии";
             // 
+            // label1
+            // 
+            label1.AllowDrop = true;
+            label1.AutoSize = true;
+            label1.BackColor = Color.WhiteSmoke;
+            label1.BorderStyle = BorderStyle.FixedSingle;
+            label1.Location = new Point(648, 510);
+            label1.Name = "label1";
+            label1.Size = new Size(304, 34);
+            label1.TabIndex = 16;
+            label1.Text = "Визуализация прогрессии";
+            // 
             // ArithmeticSequence_form
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
@@ -345,5 +360,6 @@
         private Button CulculateSum_button;
         private TextBox MemberNumber_textBox;
         private Button ShowVisualizing_button;
+        private Label label1;
     }
 }

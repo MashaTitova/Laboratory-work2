@@ -1,9 +1,10 @@
 using AlgebraicProgressionLibrary;
 using CheckTypeLibrary;
+using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Runtime.InteropServices.Swift;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using System.Drawing;
 
 /******************************************************************************
  * Файл: Program.cs
@@ -31,6 +32,10 @@ namespace Lab_2.var26
         public ArithmeticSequence_form()
         {
             InitializeComponent();
+            Label verticalLabel = new Label();
+            verticalLabel.Text = "Вертикальный текст";
+            CreateVerticalTextInPictureBox(verticalLabel);
+            this.Controls.Add(verticalLabel);
         }
 
         /// <summary>
@@ -193,99 +198,100 @@ namespace Lab_2.var26
         /// Вывод арифметической прогрессии, смена поведения полей и кнопки
         /// </summary>
         private void ShowVisualizing_button_Click(object sender, EventArgs e)
-{
-    Random random = new Random();
-    Bitmap bitmap = new Bitmap(ProgressionVisualizing_pictureBox.Width,
-                              ProgressionVisualizing_pictureBox.Height);
-    Graphics g = Graphics.FromImage(bitmap);
-
-    if (Check_calculate_ability() && ShowVisualizing_button.Text == "Показать")
-    {
-        // Генерация последовательности
-        AlgebraicProgressionLibrary.Class1.Sequence_generator(
-            Convert.ToDouble(FirstMember_textBox.Text),
-            Convert.ToDouble(Difference_textBox.Text),
-            Convert.ToInt32(MemberNumber_textBox.Text));
-
-        double[] progression_mass = AlgebraicProgressionLibrary.Global.numbers;
-        int x = 50;
-        int y = ProgressionVisualizing_pictureBox.Height;
-        int maxHeight = (int)progression_mass.Max();
-        int minHeight = (int)progression_mass.Min();
-        int height = 0;
-        int width = 0;
-        g.Clear(Color.White);
-
-        // Расчет размера стрелки
-        int arrowLength = ProgressionVisualizing_pictureBox.Height / 2 / progression_mass.Length;
-
-        for (int i = 0; i < progression_mass.Length; i++)
         {
-            // Расчет высоты столбца
-            if (Math.Abs(maxHeight) > Math.Abs(minHeight))
-            {
-                height = (int)(Math.Abs(progression_mass[i]) / (double)Math.Abs(maxHeight) *
-                    (ProgressionVisualizing_pictureBox.Height - 10));
-            }
-            else
-            {
-                height = (int)(Math.Abs(progression_mass[i]) / (double)Math.Abs(minHeight) *
-                    (ProgressionVisualizing_pictureBox.Height - 10));
-            }
+            Random random = new Random();
+            Bitmap bitmap = new Bitmap(ProgressionVisualizing_pictureBox.Width,
+                                    ProgressionVisualizing_pictureBox.Height);
+            Graphics g = Graphics.FromImage(bitmap);
 
-            width = ProgressionVisualizing_pictureBox.Height / 2 / progression_mass.Length;
-            Rectangle rect = new Rectangle(
-                x,
-                y - height,
-                width,
-                height
-            );
-
-            // Заливка столбца
-            Color randomColor = Color.FromArgb(
-                random.Next(256),
-                random.Next(256),
-                random.Next(256)
-            );
-            using (SolidBrush brush = new SolidBrush(randomColor))
+            if (Check_calculate_ability() && ShowVisualizing_button.Text == "Показать")
             {
-                g.FillRectangle(brush, rect);
-            }
+                // Генерация последовательности
+                AlgebraicProgressionLibrary.Class1.Sequence_generator(
+                    Convert.ToDouble(FirstMember_textBox.Text),
+                    Convert.ToDouble(Difference_textBox.Text),
+                    Convert.ToInt32(MemberNumber_textBox.Text));
 
-            // Отрисовка стрелок
-            using (Pen p = new Pen(Brushes.Black, 4f))
-            {
-                p.EndCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
-                
-                // Стрелки между элементами
-                if (i < progression_mass.Length - 1)
+                double[] progression_mass = AlgebraicProgressionLibrary.Global.numbers;
+                int x = 50;
+                int y = ProgressionVisualizing_pictureBox.Height;
+                int maxHeight = (int)progression_mass.Max();
+                int minHeight = (int)progression_mass.Min();
+                int height = 0;
+                int width = 0;
+                g.Clear(Color.White);
+
+                // Расчет размера стрелки
+                int arrowLength = ProgressionVisualizing_pictureBox.Height / 2 / progression_mass.Length;
+
+                for (int i = 0; i < progression_mass.Length; i++)
                 {
-                    if (Math.Abs(progression_mass[i]) <= Math.Abs(progression_mass[i + 1]))
+                    // Расчет высоты столбца
+                    if (Math.Abs(maxHeight) > Math.Abs(minHeight))
                     {
-                        // Стрелка вправо
-                        g.DrawLine(p, 
-                            x + width, y - height,
-                            x + width + arrowLength, y - height);
+                        height = (int)(Math.Abs(progression_mass[i]) / (double)Math.Abs(maxHeight) *
+                            (ProgressionVisualizing_pictureBox.Height - 10));
                     }
                     else
                     {
-                        if(i != 0)
-                        {
-                            // Стрелка влево
-                            g.DrawLine(p,
-                                x, y - height,
-                                x - arrowLength, y - height);
-                                 
-                        }
+                        height = (int)(Math.Abs(progression_mass[i]) / (double)Math.Abs(minHeight) *
+                            (ProgressionVisualizing_pictureBox.Height - 10));
                     }
-                }
 
-            }
-            x += width + arrowLength;
-        }
-        using (Pen pLast = new Pen(Brushes.Black, 4f))
-        {
-            pLast.EndCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
+                    width = ProgressionVisualizing_pictureBox.Height / 2 / progression_mass.Length;
+                    Rectangle rect = new Rectangle(
+                        x,
+                        y - height,
+                        width,
+                        height
+                    );
+
+                    // Заливка столбца
+                    Color randomColor = Color.FromArgb(
+                        random.Next(256),
+                        random.Next(256),
+                        random.Next(256)
+                    );
+                    using (SolidBrush brush = new SolidBrush(randomColor))
+                    {
+                        g.FillRectangle(brush, rect);
+                    }
+
+                    // Отрисовка стрелок
+                    using (Pen p = new Pen(Brushes.Black, 4f))
+                    {
+                        p.EndCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
+
+                        // Стрелки между элементами
+                        if (i < progression_mass.Length - 1)
+                        {
+                            if (Math.Abs(progression_mass[i]) <= Math.Abs(progression_mass[i + 1]))
+                            {
+                                // Стрелка вправо
+                                g.DrawLine(p,
+                                    x + width, y - height,
+                                    x + width + arrowLength, y - height);
+                            }
+                            else
+                            {
+                                if (i != 0)
+                                {
+                                    // Стрелка влево
+                                    g.DrawLine(p,
+                                        x, y - height,
+                                        x - arrowLength, y - height);
+
+                                }
+                            }
+                        }
+
+                    }
+                    x += width + arrowLength;
+                }
+                //Стрелка последнего столбца
+                using (Pen pLast = new Pen(Brushes.Black, 4f))
+                {
+                    pLast.EndCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
                     if (Math.Abs(maxHeight) > Math.Abs(minHeight))
                     {
                         height = (int)(Math.Abs(progression_mass[progression_mass.Length - 1]) / (double)Math.Abs(maxHeight) *
@@ -297,23 +303,43 @@ namespace Lab_2.var26
                             (ProgressionVisualizing_pictureBox.Height - 10));
 
                         g.DrawLine(pLast,
-                    x - arrowLength - width, y - height,
-                    x - arrowLength - width - arrowLength, y - height);
+                        x - arrowLength - width, y - height,
+                        x - arrowLength - width - arrowLength, y - height);
                     }
+                }
+                ProgressionVisualizing_pictureBox.Image = bitmap;
+                ShowVisualizing_button.Text = "Очистить";
+            }
+            else
+            {
+                if (ShowVisualizing_button.Text == "Очистить")
+                {
+                    g.Clear(Color.White);
+                    ProgressionVisualizing_pictureBox.Image = bitmap;
+                    ShowVisualizing_button.Text = "Показать";
+                }
+            }
         }
-        ProgressionVisualizing_pictureBox.Image = bitmap;
-        ShowVisualizing_button.Text = "Очистить";
-    }
-    else
-    {
-        if (ShowVisualizing_button.Text == "Очистить")
+
+
+        public void CreateVerticalTextInPictureBox(PictureBox pictureBox, string text)
         {
-            g.Clear(Color.White);
-            ProgressionVisualizing_pictureBox.Image = bitmap;
-            ShowVisualizing_button.Text = "Показать";
+            // Создаем Bitmap
+            Bitmap bmp = new Bitmap(pictureBox.Width, pictureBox.Height);
+
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                // Поворачиваем графику
+                g.TranslateTransform(bmp.Width / 2, bmp.Height / 2);
+                g.RotateTransform(90);
+                g.TranslateTransform(-bmp.Width / 2, -bmp.Height / 2);
+
+                // Рисуем текст
+                g.DrawString(text, new Font("Arial", 12), Brushes.Black, new PointF(0, 0));
+            }
+
+            pictureBox.Image = bmp;
         }
-    }
-}
 
         /// <summary>
         /// Вызов действия кнопки при нажатии клавиши Enter для визуализации и суммы прогрессии
