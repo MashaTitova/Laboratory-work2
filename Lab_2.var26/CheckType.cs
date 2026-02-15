@@ -14,7 +14,7 @@
 
 namespace CheckTypeLibrary
 {
-    public class Class1
+    public class CheckType
     {
 
         /// <summary>

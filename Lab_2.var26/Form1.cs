@@ -32,10 +32,6 @@ namespace Lab_2.var26
         public ArithmeticSequence_form()
         {
             InitializeComponent();
-            Label verticalLabel = new Label();
-            verticalLabel.Text = "Вертикальный текст";
-            CreateVerticalTextInPictureBox(verticalLabel);
-            this.Controls.Add(verticalLabel);
         }
 
         /// <summary>
@@ -81,9 +77,9 @@ namespace Lab_2.var26
         ///</returns>
         public bool Check_calculate_ability()
         {
-            return CheckTypeLibrary.Class1.CheckDouble(FirstMember_textBox.Text) &&
-                   CheckTypeLibrary.Class1.CheckDouble(Difference_textBox.Text) &&
-                   CheckTypeLibrary.Class1.CheckInt(MemberNumber_textBox.Text);
+            return CheckType.CheckDouble(FirstMember_textBox.Text) &&
+                   CheckType.CheckDouble(Difference_textBox.Text) &&
+                   CheckType.CheckInt(MemberNumber_textBox.Text);
 
         }
 
@@ -136,11 +132,11 @@ namespace Lab_2.var26
             if (Check_calculate_ability() && CulculateSum_button.Text == "Рассчитать")
             {
 
-                MemberSum_textBox.Text = Convert.ToString(AlgebraicProgressionLibrary.Class1.Progression_Sum(
+                MemberSum_textBox.Text = Convert.ToString(AlgebraicProgression.Progression_Sum(
                     Convert.ToDouble(FirstMember_textBox.Text),
                     Convert.ToDouble(Difference_textBox.Text),
                     Convert.ToInt32(MemberNumber_textBox.Text)));
-                SumFormula_textBox.Text = AlgebraicProgressionLibrary.Class1.Show_Formula(
+                SumFormula_textBox.Text = AlgebraicProgression.Show_Formula(
                     Convert.ToDouble(FirstMember_textBox.Text),
                     Convert.ToDouble(Difference_textBox.Text),
                     Convert.ToInt32(MemberNumber_textBox.Text));
@@ -167,7 +163,7 @@ namespace Lab_2.var26
             if (CalculateSequence_button.Text == "Рассчитать")
             {
                 //Выводится прогрессия, поля ввода заблокированы, кнопка сменила текст
-                ArithmeticSequence_textBox.Text = AlgebraicProgressionLibrary.Class1.Sequence_generator(
+                ArithmeticSequence_textBox.Text = AlgebraicProgression.Sequence_generator(
                 Convert.ToDouble(FirstMember_textBox.Text),
                 Convert.ToDouble(Difference_textBox.Text),
                 Convert.ToInt32(MemberNumber_textBox.Text));
@@ -207,7 +203,7 @@ namespace Lab_2.var26
             if (Check_calculate_ability() && ShowVisualizing_button.Text == "Показать")
             {
                 // Генерация последовательности
-                AlgebraicProgressionLibrary.Class1.Sequence_generator(
+                AlgebraicProgression.Sequence_generator(
                     Convert.ToDouble(FirstMember_textBox.Text),
                     Convert.ToDouble(Difference_textBox.Text),
                     Convert.ToInt32(MemberNumber_textBox.Text));
@@ -260,7 +256,7 @@ namespace Lab_2.var26
                     // Отрисовка стрелок
                     using (Pen p = new Pen(Brushes.Black, 4f))
                     {
-                        p.EndCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
+                        p.EndCap = LineCap.ArrowAnchor;
 
                         // Стрелки между элементами
                         if (i < progression_mass.Length - 1)
@@ -291,7 +287,7 @@ namespace Lab_2.var26
                 //Стрелка последнего столбца
                 using (Pen pLast = new Pen(Brushes.Black, 4f))
                 {
-                    pLast.EndCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
+                    pLast.EndCap = LineCap.ArrowAnchor;
                     if (Math.Abs(maxHeight) > Math.Abs(minHeight))
                     {
                         height = (int)(Math.Abs(progression_mass[progression_mass.Length - 1]) / (double)Math.Abs(maxHeight) *
@@ -322,24 +318,7 @@ namespace Lab_2.var26
         }
 
 
-        public void CreateVerticalTextInPictureBox(PictureBox pictureBox, string text)
-        {
-            // Создаем Bitmap
-            Bitmap bmp = new Bitmap(pictureBox.Width, pictureBox.Height);
 
-            using (Graphics g = Graphics.FromImage(bmp))
-            {
-                // Поворачиваем графику
-                g.TranslateTransform(bmp.Width / 2, bmp.Height / 2);
-                g.RotateTransform(90);
-                g.TranslateTransform(-bmp.Width / 2, -bmp.Height / 2);
-
-                // Рисуем текст
-                g.DrawString(text, new Font("Arial", 12), Brushes.Black, new PointF(0, 0));
-            }
-
-            pictureBox.Image = bmp;
-        }
 
         /// <summary>
         /// Вызов действия кнопки при нажатии клавиши Enter для визуализации и суммы прогрессии
@@ -358,6 +337,52 @@ namespace Lab_2.var26
                     ShowVisualizing_button_Click(tmp, e);
                 }
             }
+        }
+
+        /// <summary>
+        /// Вызов всплывающего окна со справкой для пользователя
+        /// </summary>
+        private void Information(object sender, EventArgs e)
+        {
+            var tmp = (Button)sender;
+
+            if (tmp.Name == "SumInf_button")
+            {
+                MessageBox.Show("Сумма считается только если корректно введены" +
+                    " все значения в поля ввода на странице 'Генератор прогрессии'");
+            }
+            else
+            {
+                if (tmp.Name == "VisualizeInf_button")
+                {
+                    MessageBox.Show("Визуализация производится если корректно введены" +
+                        " все значения в поля ввода на странице 'Генератор прогрессии'\n" +
+                        "Чтобы получить информацию об осях графика нажмите кнопку x или y");
+                }
+                else
+                {
+                    if (tmp.Name == "ShowX_button")
+                    {
+                        MessageBox.Show("Ось x показывает члены прогрессии");
+                    }
+                    else
+                    {
+                        if (tmp.Name == "ShowY_button")
+                        {
+                            MessageBox.Show("Ось y показывает соотношение членов прогрессии");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Введите значения в соответствующие поля.\n" +
+                                "При нажатии кнопки или клавиши Enter выведется результат.\n" +
+                                "Пока значения не будут правильно введены во все поля, кнопка будет недоступна.");
+                        }
+                    }
+                    
+                }
+                
+            }
+            
         }
     }
 }
