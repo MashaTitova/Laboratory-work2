@@ -18,7 +18,7 @@ namespace AlgebraicProgressionLibrary
     {
         public static double[] numbers = new double[0];
     }
-    public class Class1
+    public class AlgebraicProgression
     {
         /// <summary>
         /// Составляет арифметическую прогрессию
