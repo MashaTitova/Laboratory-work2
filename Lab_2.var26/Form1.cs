@@ -86,7 +86,7 @@ namespace Lab_2.var26
         /// <summary>
         /// Рассчет прогрессии или переход на незаполненное поле при нажатии клавиши Enter
         /// </summary>
-        private void Enter_Action(object sender, KeyEventArgs e)
+        public void Enter_Action(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -125,7 +125,7 @@ namespace Lab_2.var26
         /// <summary>
         /// Вывод суммы арифметической прогрессии и формулы или очистка полей
         /// </summary>
-        private void CulculateSum_button_Click(object sender, EventArgs e)
+        public void CulculateSum_button_Click(object sender, EventArgs e)
         {
             //Если прогрессия была посчитана, то выводим значения суммы и формулу
             //Кнопка меняет свой текст
