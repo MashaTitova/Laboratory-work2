@@ -5,7 +5,7 @@ public class CheckTypeTests
 {
     [Fact]
     public void CheckDouble_ValidDouble_ReturnsTrue()
-    {
+    { 
         // Arrange
         string validDouble = "3,14";
 
